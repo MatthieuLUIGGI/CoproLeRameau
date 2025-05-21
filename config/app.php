@@ -1,7 +1,10 @@
 <?php
+use Illuminate\Support\Facades\URL;
+$scheme = isset($_SERVER['HTTP_X_FORWARDED_PROTO']) ? $_SERVER['HTTP_X_FORWARDED_PROTO'] : 'http';
+$url = $scheme.'://'.$_SERVER['HTTP_HOST'];
+URL::forceRootUrl($url);
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Application Name
