@@ -1,8 +1,9 @@
 {
     "build": {
-        "builder": "nixpacks",
-        "config": {
-            "startCommand": "php-fpm -y /etc/php/php-fpm.conf && nginx -c /etc/nginx/nginx.conf"
-        }
+      "builder": "nixpacks",
+      "config": {
+        "startCommand": "php artisan octane:start --server=roadrunner --host=0.0.0.0 --port=9000",
+        "webCommand": "./public"
+      }
     }
-}
+  }
