@@ -2,7 +2,7 @@
     "build": {
       "builder": "nixpacks",
       "config": {
-        "startCommand": "php-fpm -y /etc/php/php-fpm.conf && nginx -c /app/nginx.conf",
+        "startCommand": "php-fpm -y /app/php-fpm.conf && nginx -c /app/nginx.conf",
         "webCommand": "./public"
       }
     }
